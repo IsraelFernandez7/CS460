@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ this defines the layout of the application
+ -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+ <!--
+ this defines the layout of what is being typed by the user.
+ its predefined with a student ID
+ -->
+    <TextView
+        android:id="@+id/solution_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="41468369"
+        android:textColor="@color/black"
+        android:textSize="32dp"
+        android:textAlignment="textEnd"
+        app:layout_constraintBottom_toTopOf="@id/result_tv"/>
+
+    <!--
+    this defines the layout of the result of an equation.
+    its predefined with a student name.
+    -->
+    <TextView
+        android:id="@+id/result_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="12dp"
+        android:text="Israel F"
+        android:textAlignment="textEnd"
+        android:textColor="@color/black"
+        android:textSize="64dp"
+        app:layout_constraintBottom_toTopOf="@id/button_layout"
+        tools:layout_editor_absoluteX="69dp" />
+
+    <!--
+    defines the button and display layout of the application
+    -->
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--
+        this defines structure and cosmetic for the clear button
+        -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_c"
+            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_margin="12dp"
+            android:text="C"
+            android:textColor="@color/white"
+            android:textSize="32dp"
+            android:backgroundTint="#337Dff"
+            app:cornerRadius="36dp"/>
+
+        <!--
+        this defines structure and cosmetic for the open parenthesis button
+        -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_open_bracket"
+            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_margin="12dp"
+            android:text="("
+            android:textColor="@color/white"
+            android:textSize="32dp"
+            android:backgroundTint="#20B2AA"
+            app:cornerRadius="36dp"/>
+
+        <!--
+        this defines structure and cosmetic for the closed parenthesis button
+        -->
+        <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_close_bracket"
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+            android:layout_margin="12dp"
+            android:text=")"
+        android:textColor="@color/white"
+        android:textSize="32dp"
+        android:backgroundTint="#20B2AA"
+        app:cornerRadius="36dp"/>
+
+        <!--
+        this defines structure and cosmetic for the division button
+        -->
+        <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_divide"
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+            android:layout_margin="12dp"
+            android:text="/"
+        android:textColor="@color/white"
+        android:textSize="32dp"
+        android:backgroundTint="#32CD32"
+        app:cornerRadius="36dp"/>
+    </LinearLayout>
+
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!--
+            this defines structure and cosmetic for the 7 button
+            -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_7"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:text="7"
+                android:textColor="@color/white"
+                android:textSize="32dp"
+                android:backgroundTint="#FF7F59D7"
+                app:cornerRadius="36dp"/>
+
+            <!--
+            this defines structure and cosmetic for the 8 button
+            -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_8"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:text="8"
+                android:textColor="@color/white"
+                android:textSize="32dp"
+                android:backgroundTint="#FF7F59D7"
+                app:cornerRadius="36dp"/>
+
+            <!--
+            this defines structure and cosmetic for the 9 button
+            -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_9"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:text="9"
+                android:textColor="@color/white"
+                android:textSize="32dp"
+                android:backgroundTint="#FF7F59D7"
+                app:cornerRadius="36dp"/>
+
+            <!--
+            this defines structure and cosmetic for the multiplication button
+            -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_mul"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:text="*"
+                android:textColor="@color/white"
+                android:textSize="32dp"
+                android:backgroundTint="#32CD32"
+                app:cornerRadius="36dp"/>
+            </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!--
+            this defines structure and cosmetic for the 4 button
+            -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_4"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:text="4"
+                android:textColor="@color/white"
+                android:textSize="32dp"
+                android:backgroundTint="#FF7F59D7"
+                app:cornerRadius="36dp"/>
+
+            <!--
+            this defines structure and cosmetic for the 5 button
+            -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_5"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:text="5"
+                android:textColor="@color/white"
+                android:textSize="32dp"
+                android:backgroundTint="#FF7F59D7"
+                app:cornerRadius="36dp"/>
+
+            <!--
+            this defines structure and cosmetic for the 6 button
+            -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_6"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:text="6"
+                android:textColor="@color/white"
+                android:textSize="32dp"
+                android:backgroundTint="#FF7F59D7"
+                app:cornerRadius="36dp"/>
+
+            <!--
+            this defines structure and cosmetic for the addition button
+            -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_plus"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:text="+"
+                android:textColor="@color/white"
+                android:textSize="32dp"
+                android:backgroundTint="#32CD32"
+                app:cornerRadius="36dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!--
+            this defines structure and cosmetic for the 1 button
+            -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_1"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:text="1"
+                android:textColor="@color/white"
+                android:textSize="32dp"
+                android:backgroundTint="#FF7F59D7"
+                app:cornerRadius="36dp"/>
+
+            <!--
+            this defines structure and cosmetic for the 2 button
+            -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_2"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:text="2"
+                android:textColor="@color/white"
+                android:textSize="32dp"
+                android:backgroundTint="#FF7F59D7"
+                app:cornerRadius="36dp"/>
+
+            <!--
+            this defines structure and cosmetic for the 3 button
+            -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_3"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:text="3"
+                android:textColor="@color/white"
+                android:textSize="32dp"
+                android:backgroundTint="#FF7F59D7"
+                app:cornerRadius="36dp"/>
+
+            <!--
+            this defines structure and cosmetic for the subtration button
+            -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_minus"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:text="-"
+                android:textColor="@color/white"
+                android:textSize="32dp"
+                android:backgroundTint="#32CD32"
+                app:cornerRadius="36dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!--
+            this defines structure and cosmetic for the all clear button
+            -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_AC"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:text="AC"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:backgroundTint="#FF3377"
+                app:cornerRadius="36dp"/>
+
+            <!--
+            this defines structure and cosmetic for the 0 button
+            -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_0"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="32dp"
+                android:backgroundTint="#FF8033"
+                app:cornerRadius="36dp"/>
+
+            <!--
+            this defines structure and cosmetic for the decimal button
+            -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_dot"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:text="."
+                android:textColor="@color/white"
+                android:textSize="32dp"
+                android:backgroundTint="#FF7F59D7"
+                app:cornerRadius="36dp"/>
+
+            <!--
+            this defines structure and cosmetic for the equals button
+            -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_equal"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:text="="
+                android:textColor="@color/white"
+                android:textSize="32dp"
+                android:backgroundTint="#32CD32"
+                app:cornerRadius="36dp"/>
+        </LinearLayout>
+
+</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
